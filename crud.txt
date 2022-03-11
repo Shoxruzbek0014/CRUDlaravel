@@ -1,0 +1,23 @@
+#CRUD Laravel step
+composer create-project laravel/laravel CRUDlaravel #create CRUDlaravel project
+crudlaravel #create database
+php artisan serve
+create table name,address,mobile
+php artisan migrate
+php artisan make:controller CrudController --resource #create resource controller
+
+php artisan make:model Contact #create model
+protectd $table = 'contacts'
+protectd $primaryKey = 'id'
+protectd $fillable = ['name','address','mobile']
+
+contacts #folder create and in
+layout.blade.php
+index.blade.php
+Create.blade.php
+edit.blade.php
+show.blade.php
+
+
+
+Route::resource('contact', ContactController::class);
